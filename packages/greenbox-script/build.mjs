@@ -26,6 +26,7 @@ const context = await esbuild.context({
   entryPoints: {
     "scripts/greenbox/greenbox": "src/greenbox.ts",
     "relay/relay_greenbox": "src/relay.ts",
+    "scripts/greenbox/don_greenbox_report": "src/don-report.ts",
     // This is where you generate the data for iotms.ts from MrStoreMonthly; does not need to exist in distribution
     // generateIotmList: "src/generateIotms.ts",
   },
