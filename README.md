@@ -27,3 +27,8 @@ For more information on the...
 ## History
 
 In KoL's community, "green boxes" are a reference to a profile snapshot script [once owned by BumCheekCity](http://forums.kingdomofloathing.com/vb/showthread.php?t=179109) and more [recently owned by CheeseCookie](http://forums.kingdomofloathing.com/vb/showthread.php?t=218735). In the parlance of these snapshots, a green box means you own the thing that's in the box. Hence the name of this script. While this script was coded from scratch, the general structure (and the community impact of the script) owes a substantial amount to BumCheekCity and CheeseCookie, and we are thankful for their contributions to KoL.
+
+## Don Report v1 (fork-only, read-only)
+
+The independent `packages/greenbox-script/src/don-report.ts` builds to `scripts/greenbox/don_greenbox_report.js`. It does **not** run the regular Greenbox profile collector, visit account pages, send Kmail or use the relay redirect. Use `call greenbox/don_greenbox_report.js skills_current --quiet`, `--print` or `--json` after building/installing. This lists **all currently available skills**, with permanent softcore/hardcore status where known. `--diff` reports a known-unknown until a validated prior scoped record is supplied. Current JSON is a console-only probe envelope, **not** a persisted Don Report receipt. All source/hook/record toggles are governed by [Don KoLFix](https://github.com/donCannoli-burns/don_kolfix/blob/main/docs/don-report-v1.md) and default off. No hook is enabled by this change.
+
