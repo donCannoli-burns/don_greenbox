@@ -18,11 +18,6 @@ jobs:
         run: |
           yarn workspace greenbox-data build
           yarn workspace greenbox-script build
-      - name: Preview standalone report formatting (temporary)
-        run: |
-          echo "DONFMT_START:packages/greenbox-script/src/don-report.ts"
-          yarn prettier packages/greenbox-script/src/don-report.ts
-          echo "DONFMT_END:packages/greenbox-script/src/don-report.ts"
       - name: Lint and test script
         run: |
           yarn workspace greenbox-script lint
